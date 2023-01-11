@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript - MMR</title>
+
+    <script>
+        function myFunction() {
+            document.getElementById("head_script").innerHTML = "Paragraph changed.";
+        }
+    </script>
+</head>
+
+<body>
+<!--First Attempt-->
+<h1>BOOM! This is where I begin...</h1>
+<button type="button" onclick="document.getElementById('test_id').innerHTML=Date()">Current Date and Time</button>
+<p id="test_id">Date/Time will show here!</p>
+
+<!--Second Attempt-->
+<button type="button" onclick='document.getElementById("changer").innerHTML = "This will appear!"'>Magic Button</button>
+<p id="changer">This line will be change.</p>
+
+<!--Third Attempt-->
+<p>JavaScript can change HTML attribute values.</p>
+
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<button onclick="document.getElementById('change_image').src='images/moon.jpg'">moon</button>
+<button onclick="document.getElementById('change_image').src='images/sun.jpg'">sun</button>
+<button onclick="document.getElementById('change_image').src='images/bird.jpg'">bird</button>
+<button onclick="document.getElementById('change_image').src='images/panda.jpg'">panda</button>
+
+<br>
+<img id="change_image" src="images/panda.jpg" alt="panda" height="100" width="100">
+
+<p id="check_css_1.1">It will be Bigger!</p>
+<p id="check_css_1.2">It will be Smaller!</p>
+
+<button onclick="document.getElementById('check_css_1.1').style.fontSize='35px'">Bigger!</button>
+<button onclick="document.getElementById('check_css_1.2').style.fontSize='10px'">Smaller!</button>
+
+<p>see my name...&#128526;</p>
+<p id="check_css_2" style="display: none">MOSFIK!!</p>
+<button onclick="document.getElementById('check_css_2').style.display= 'block'">see now!</button>
+
+
+<!--with Inside JavaScript-->
+<h3 id="script"></h3>
+<script>
+    document.getElementById("script").innerHTML = "It's from Script snippet!";
+</script>
+
+<p id="head_script">A Paragraph.</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+</body>
+</html>
